@@ -16,7 +16,17 @@ git fetch out
 ```sh
 git branch develop out/main
 ```
-5. Push commits to private Gitlab
+5. Switch to develop branch
+```sh
+git checkout develop
+```
+6. Push commits to private Gitlab
 ```sh
 git push -u origin -o merge_request.create
+```
+
+Create CRON job to automate this proccess:
+
+```sh
+* * * * * /path/to/script/automerge.sh
 ```
